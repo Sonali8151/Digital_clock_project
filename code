@@ -1,0 +1,69 @@
+/*import java.util.Locale;
+/*
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class p3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        // Read the array elements in a single line
+        String input = scanner.nextLine(); // Consume the newline character
+
+        String[] inputArr = input.split(" ");
+
+        // Parse the input elements into an integer array
+        int[] arr = new int[5];
+        for (int i = 0; i < 5; i++) {
+            arr[i] = Integer.parseInt(inputArr[i]);
+        }
+
+        // Find the second largest element
+        int secondLargest = findSecondLargest(arr);
+
+        // Print the second largest element
+        System.out.println(secondLargest);
+    }
+
+    private static int findSecondLargest(int[] arr) {
+        // Sort the array in ascending order
+        Arrays.sort(arr);
+
+        // Return the second last element
+        return arr[arr.length - 2];
+    }
+}
+*/
+import java.util.Scanner;
+public class p3{
+	 public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        String s=sc.nextLine();
+	        
+	        p3 p=new p3();
+	        String result=p.palindm(s);
+	        System.out.println(result);  
+	 }
+	 
+	 
+	public String  palindm(String s) {
+		String rev="";
+		s=s.replaceAll("[!-@]", "");
+		for (int i=0;i<s.length();i++) {
+			char ch=s.charAt(i);
+			if(s.charAt(i)>='A' && s.charAt(i)<='Z') {
+		        ch=(char) (s.charAt(i)+32);
+		        s=s.replace(s.charAt(i),ch);
+			}	
+			rev=rev+s.charAt(i);
+		}
+		if(rev.equals(s)) {
+			return "Accepted";
+		}
+		else
+			return "Rejected";
+		
+	}
+		 
+}*/
